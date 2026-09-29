@@ -1,0 +1,27 @@
+# 作业三运行环境（本机已用 E:\Anaconda\python.exe + 用户级 site-packages 验证通过）
+#
+# 说明：
+# 1) torch / transformers / sentence-transformers / selenium / undetected-chromedriver 本机用户级目录已装
+#    （torch 2.14.0+cu130 支持 RTX 5060 的 sm_120），无需重装；
+# 2) 下面 4 个包是本机原本缺失、由本作业补装到用户级 site-packages 的（清华源）：
+#    pip install --user pdfplumber rank_bm25 pymupdf
+#    jieba 只有源码包且 pip 构建隔离有问题，改用源码包 setup.py 或直接解包安装（本机已装 0.42.1）
+pdfplumber==0.11.10
+pdfminer.six==20260107
+pymupdf==1.28.2
+rank_bm25==0.2.2
+jieba==0.42.1
+
+# 已验证的本机既有版本（仅记录，不重复安装）
+# torch==2.14.0+cu130
+# transformers==5.17.0
+# sentence-transformers==6.1.0
+# selenium==4.44.0
+# undetected-chromedriver==3.5.5
+# huggingface-hub==1.31.0
+# requests==2.31.0
+# numpy==1.26.4
+# pandas==3.0.3
+# openpyxl==3.0.10
+# flask==2.2.5
+# streamlit==1.30.0   （注意：base 里的 streamlit 1.30 与用户级 pandas 3.0.3 不兼容，因此问答页面用 Flask）
